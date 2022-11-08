@@ -18,10 +18,12 @@ void _get_type(char c, va_list arg)
 	
 	while (index < 3)
 	{
-		if (list[index].t == c)
+		if *(list[index].t == c)
 		{
 			list[index].f(arg);
-			break;
+			return 1;
 		}
+		index+=1;
 	}
+	return 0;
 }
