@@ -1,7 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdarg.h>
-#include <main.h>
+#include "main.h"
 
 /**
 * _print_str - Entry point...
@@ -12,7 +9,7 @@
 
 void _print_str(va_list arg)
 {
-	char *s = arg;
+	char *s = va_arg(arg, char*);
 
 	while (*s != '\0')
 	{

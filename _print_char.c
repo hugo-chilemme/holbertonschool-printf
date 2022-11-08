@@ -1,7 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <stdarg.h>
-#include <main.h>
+#include "main.h"
 
 /**
 * _print_char - Entry point...
@@ -12,5 +9,5 @@
 
 void _print_char(va_list arg)
 {
-	_putchar((char) arg);
+	_putchar((char) va_arg(arg, int));
 }

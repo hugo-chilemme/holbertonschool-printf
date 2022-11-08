@@ -1,3 +1,5 @@
+#include "main.h"
+
 /**
  * sum_them_all - check the code
  * @n: number of array
