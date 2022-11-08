@@ -33,5 +33,5 @@ int _print_f(char *s, ...)
 			_putchar(s[i]);
 	}
 
-	return (a + b);
+	return (1);
 }
