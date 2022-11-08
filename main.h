@@ -8,11 +8,11 @@
 
 int _printf(const char *format, ...);
 void _putchar(char c);
-void _get_type(char c, va_list arg);
-void _print_char(va_list arg);
-void _print_int(va_list arg);
-void _print_int_reverse(int n);
-void _print_str(va_list arg);
+int _get_type(char c, va_list arg);
+int _print_char(va_list arg);
+int _print_int(va_list arg);
+int _print_int_reverse(int n, int b);
+int _print_str(va_list arg);
 
 /**
  * struct formats - Struct dog
@@ -23,7 +23,7 @@ void _print_str(va_list arg);
 typedef struct formats
 {
 	char *t;
-	void (*f)(va_list p);
+	int (*f)(va_list p);
 } formats;
 
 #endif

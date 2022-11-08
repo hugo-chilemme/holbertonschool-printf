@@ -6,9 +6,9 @@
 * Return: Always 0 (Success)
 * @arg: va_list parmameter
 */
-void _print_int(va_list arg)
+int _print_int(va_list arg)
 {
-	_print_int_reverse((int) va_arg(arg, int));
+	return _print_int_reverse((int) va_arg(arg, int), 0);
 }
 
 /**
@@ -16,12 +16,13 @@ void _print_int(va_list arg)
  * Return: Nothing
  * @i: number
  */
-void _print_int_reverse(int i)
+int _print_int_reverse(int i, int b)
 {
 	int r = i / 10;
 
 	if (r > 0)
-		_print_int_reverse(r);
-
+		_print_int_reverse(r, b + 1);
 	_putchar('0' + (int) i % 10);
+
+	return (b);
 }

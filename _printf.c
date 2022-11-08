@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 {
 	va_list a;
 	int len = 0, i = 0;
+	int totalLength = 0;
 
 	if (!format)
 		return (0);
@@ -26,12 +27,15 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == '%')
 		{
-			_get_type(format[i + 1], a);
+			totalLength += _get_type(format[i + 1], a);
 			i++;
 		}
 		else
+		{
 			_putchar(format[i]);
+			totalLength++;
+		}
 	}
 
-	return (1);
+	return (totalLength);
 }

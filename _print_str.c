@@ -7,12 +7,15 @@
 * @arg: va_list parmameter
 */
 
-void _print_str(va_list arg)
+int _print_str(va_list arg)
 {
+	int len = 0;
 	char *s = va_arg(arg, char*);
 
 	while (*s != '\0')
 	{
+		len++;
 		_putchar(*s++);
 	}
+	return (len);
 }

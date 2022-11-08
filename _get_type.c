@@ -5,7 +5,7 @@
  * @n: number of array
  * Return: Always 0.
  */
-void _get_type(char c, va_list arg)
+int _get_type(char c, va_list arg)
 {
 	formats list[] = {
 		{"i", _print_int},
@@ -20,9 +20,9 @@ void _get_type(char c, va_list arg)
 	{
 		if (*list[index].t == c)
 		{
-			list[index].f(arg);
-			return;
+			return list[index].f(arg);
 		}
 		index++;
 	}
+	return 0;
 }
