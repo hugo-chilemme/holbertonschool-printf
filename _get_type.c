@@ -15,15 +15,14 @@ void _get_type(char c, va_list arg)
 
 
 	int index = 0;
-	
+
 	while (index < 3)
 	{
 		if (*list[index].t == c)
 		{
 			list[index].f(arg);
-			return 1;
+			return;
 		}
-		index+=1;
+		index++;
 	}
-	return 0;
 }
