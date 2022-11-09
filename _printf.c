@@ -37,5 +37,7 @@ int _printf(const char *format, ...)
 			totalLength++;
 		}
 	}
+	if (totalLength == 0)
+		return (-1);
 	return (totalLength);
 }
