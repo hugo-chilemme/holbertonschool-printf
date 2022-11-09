@@ -20,9 +20,9 @@ int _get_type(char c, va_list arg)
 	{
 		if (*list[index].t == c)
 			return list[index].f(arg);
-
 		index++;
 	}
+	_putchar('%');
 	_putchar(c);
-	return 0;
+	return 2;
 }
