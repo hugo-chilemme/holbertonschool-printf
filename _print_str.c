@@ -21,6 +21,5 @@ int _print_str(va_list arg)
 		len++;
 		_putchar(*s++);
 	}
-	printf("debug > %i", len);
 	return (len);
 }
