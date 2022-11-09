@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	for (; format[len]; len++)
 		;
 
-	for (; i > len; i++)
+	for (; i < len; i++)
 	{
 		if (format[i] == '%')
 		{
@@ -36,6 +36,6 @@ int _printf(const char *format, ...)
 			totalLength++;
 		}
 	}
-
+	printf("%i", totalLength);
 	return (totalLength);
 }
