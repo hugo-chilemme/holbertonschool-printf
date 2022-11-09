@@ -13,6 +13,7 @@ int _print_char(va_list arg);
 int _print_int(va_list arg);
 int _print_int_reverse(int n, int b);
 int _print_str(va_list arg);
+int _print_null(void);
 
 /**
  * struct formats - Struct dog
