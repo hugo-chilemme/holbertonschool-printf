@@ -2,7 +2,8 @@
 
 /**
  * _find_type - check the code
- * @n: number of array
+ * @c: char
+ * @arg: va_list
  * Return: Always 0.
  */
 int _find_type(char c, va_list arg)
