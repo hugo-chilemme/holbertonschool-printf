@@ -21,9 +21,9 @@ int _print_int_reverse(int i, int b)
 {
 	int r = i / 10;
 
-	if (r > 0)
-		_print_int_reverse(r, b + 1);
 	_putchar('0' + (int) i % 10);
 
-	return (b);
+	if (r == 0)
+		return (b + 1);
+	return (_print_int_reverse(r, b + 1));
 }
