@@ -22,7 +22,11 @@ int _get_type(char c, va_list arg)
 			return list[index].f(arg);
 		index++;
 	}
-	_putchar('%');
+	if (c != '%')
+	{
+		_putchar('%');
+		return 1;
+	}
 	_putchar(c);
-	return 2;
+	return 1;
 }
