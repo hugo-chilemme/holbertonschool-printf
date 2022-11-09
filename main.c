@@ -1,20 +1,22 @@
-#include <limits.h>
-#include <stdio.h>
 #include "main.h"
 
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: 0 on success, error code otherwise
  */
 int main(void)
 {
-    int len;
-    int len2;
-	
-    len = _printf("That a %s\n", "test.");
-    len2 = printf("That a %s\n", "test.");
+	int len, len2;
 
-    printf("%i/%i\n", len, len2);
-    return (0);
+	len = _printf("%!\n");
+	len2 = printf("%!\n");
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }

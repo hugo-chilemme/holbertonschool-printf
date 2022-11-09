@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{	
 			if (format[i + 1])
-				totalLength += _get_type(format[i + 1], a);
+				totalLength += _find_type(format[i + 1], a);
 			i++;
 		}
 		else

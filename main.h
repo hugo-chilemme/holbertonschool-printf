@@ -8,7 +8,7 @@
 
 int _printf(const char *format, ...);
 void _putchar(char c);
-int _get_type(char c, va_list arg);
+int _find_type(char c, va_list arg);
 int _print_char(va_list arg);
 int _print_int(va_list arg);
 int _print_int_reverse(int n, int b);
