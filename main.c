@@ -12,9 +12,9 @@ int main(void)
     int len;
     int len2;
 	
-    len = _printf("That a %s", "test.");
-    len2 = printf("That a %s", "test.");
+    len = _printf("That a %s\n", "test.");
+    len2 = printf("That a %s\n", "test.");
 
-    printf("%i/%i", len, len2);
+    printf("%i/%i\n", len, len2);
     return (0);
 }
