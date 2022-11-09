@@ -16,18 +16,19 @@ int _printf(const char *format, ...)
 	int totalLength = 0;
 
 	if (!format)
-		return (0);
-
-	va_start(a, format);
+		return (-1);
 
 	for (; format[len]; len++)
 		;
 
+	va_start(a, format);
+
 	for (; i < len; i++)
 	{
 		if (format[i] == '%')
-		{
-			totalLength += _get_type(format[i + 1], a);
+		{	
+			if (format[i + 1])
+				totalLength += _get_type(format[i + 1], a);
 			i++;
 		}
 		else
