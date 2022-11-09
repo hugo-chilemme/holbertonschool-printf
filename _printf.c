@@ -36,6 +36,5 @@ int _printf(const char *format, ...)
 			totalLength++;
 		}
 	}
-	printf("%i", totalLength);
 	return (totalLength);
 }
