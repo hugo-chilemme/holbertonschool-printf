@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-* _print_f - Entry point...
+* _printf - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @format: string parmameter
@@ -26,7 +26,7 @@ int _printf(const char *format, ...)
 	for (; i < len; i++)
 	{
 		if (format[i] == '%')
-		{	
+		{
 			if (format[i + 1])
 				totalLength += _find_type(format[i + 1], a);
 			i++;
