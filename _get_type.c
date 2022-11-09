@@ -23,5 +23,6 @@ int _get_type(char c, va_list arg)
 
 		index++;
 	}
+	_putchar(c);
 	return 0;
 }
