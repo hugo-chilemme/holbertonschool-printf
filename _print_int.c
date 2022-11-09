@@ -8,13 +8,14 @@
 */
 int _print_int(va_list arg)
 {
-	return _print_int_reverse((int) va_arg(arg, int), 0);
+	return (_print_int_reverse((int) va_arg(arg, int), 0));
 }
 
 /**
  * _print_int_reverse - Entry point...
  * Return: Nothing
  * @i: number
+ * @b: length
  */
 int _print_int_reverse(int i, int b)
 {
