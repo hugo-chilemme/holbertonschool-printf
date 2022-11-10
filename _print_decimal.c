@@ -8,5 +8,5 @@
 */
 int _print_decimal(va_list arg)
 {
-	return (_print_int());
+	return (_print_int(arg));
 }
