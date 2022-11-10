@@ -1,5 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
+#include "main.h"
 
 /**
 * _print_float - Entry point...
@@ -10,7 +9,7 @@
 
 int _print_float (va_list arg)
 {
-	double i, deci, def = (double) arg;
+	double i, deci, def = va_arg(arg, double);
 	int repDec, repUnit, len, mult = 1;
 	int m = 0;
 
@@ -26,11 +25,11 @@ int _print_float (va_list arg)
 	}
 
 	repDec = (double) i * mult;
-	reUnit = deci;
+	repUnit = deci;
 
 	parse_int(repUnit, repUnit, 1, &m);
 	len = int_size(m);
-
+	_putchar('.');
 	parse_int(repDec, repDec, 1, &m);
 	len += int_size(m);
 
