@@ -19,7 +19,7 @@ int _print_int(va_list arg)
 		m++;
 	}
 
-	parse_int((int) va_arg(arg, int), (int) va_arg(arg, int), 1, &m);
+	parse_int(val, val, 1, &m);
 	return (int_size(m));
 }
 
