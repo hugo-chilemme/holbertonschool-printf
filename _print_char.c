@@ -9,6 +9,5 @@
 
 int _print_char(va_list arg)
 {
-	_putchar((char) va_arg(arg, int));
-	return (1);
+	return (_putchar((char) va_arg(arg, int)));
 }
