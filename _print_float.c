@@ -11,7 +11,7 @@ int _print_float (va_list arg)
 {
 	double i, deci, def = va_arg(arg, double);
 	int repDec, repUnit, len, mult = 1;
-	int m = 0;
+	long int m = 0;
 
 	for (i = def; i > 1; i -= 1)
 		;
