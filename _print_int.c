@@ -9,6 +9,8 @@
 int _print_int(va_list arg)
 {
 	int m = 0;
+	int val = va_arg(arg, int) > 0 : ;
+
 
 	parse_int((int) va_arg(arg, int), (int) va_arg(arg, int), 1, &m);
 	return (int_size(m));
@@ -49,7 +51,7 @@ void parse_int(int n, int r, int mul, int *m)
 
 	if (r > 1)
 		parse_int(n, r, mul, m);
-	putchar('0' + f);
+	_putchar('0' + f);
 	return;
 
 }
