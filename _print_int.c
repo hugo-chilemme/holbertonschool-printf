@@ -8,7 +8,7 @@
 */
 int _print_int(va_list arg)
 {
-	int m = 1;
+	long int m = 1;
 	int a = 0;
 	long int val = va_arg(arg, long int);
 
@@ -27,7 +27,7 @@ int _print_int(va_list arg)
 * Return: Always 0 (Success)
 * @n: int parmameter
 */
-long int int_size(int n)
+int int_size(long int n)
 {
 
 	long int i = 0;
