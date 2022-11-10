@@ -8,22 +8,50 @@
 */
 int _print_int(va_list arg)
 {
-	return (_print_int_reverse((int) va_arg(arg, int), 0));
+	int m = 0;
+	int val = va_arg(arg, int) > 0 : ;
+
+
+	parse_int((int) va_arg(arg, int), (int) va_arg(arg, int), 1, &m);
+	return (int_size(m));
 }
 
 /**
- * _print_int_reverse - Entry point...
- * Return: Nothing
- * @i: number
- * @b: length
- */
-int _print_int_reverse(int i, int b)
+* int_size - Entry point...
+* Description: 'the program desc'
+* Return: Always 0 (Success)
+* @n: int parmameter
+*/
+int int_size(int n)
 {
-	int r = i / 10;
 
-	_putchar('0' + (int) i % 10);
+	int i = 0;
 
-	if (r == 0)
-		return (b + 1);
-	return (_print_int_reverse(r, b + 1));
+	for (; n > 1; i++)
+		n /= 10;
+
+	return (i);
+}
+
+/**
+ * parse_int - Entry point...
+ * Return: Nothing
+ * @n: number
+ * @r: number max
+ * @mul: multiplie
+ * @m: pointer
+ */
+void parse_int(int n, int r, int mul, int *m)
+{
+	int f = (n / mul) % 10;
+
+	r -= f * mul;
+	mul *= 10;
+	*m = mul;
+
+	if (r > 1)
+		parse_int(n, r, mul, m);
+	_putchar('0' + f);
+	return;
+
 }
