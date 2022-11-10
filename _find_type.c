@@ -13,12 +13,18 @@ int _find_type(char c, va_list arg)
 		{"d", _print_int},
 		{"c", _print_char},
 		{"s", _print_str},
+		{NULL, NULL}
 	};
 
-	int len = 0;
+	int len = 1;
 	int index = 0;
+	int slength = 0;
 
-	while (index < 3)
+	for (; list[slength].t; slength++)
+		;
+
+
+	while (index < slength)
 	{
 		if (*list[index].t == c)
 			return (list[index].f(arg));
@@ -26,11 +32,7 @@ int _find_type(char c, va_list arg)
 	}
 
 	if (c != '%')
-	{
-		_putchar('%');
-		len++;
-	}
-	len++;
+		len += _putchar('%');
 	_putchar(c);
 	return (len);
 }
