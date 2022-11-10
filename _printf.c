@@ -12,7 +12,6 @@
 int _printf(const char *format, ...)
 {
 	va_list a;
-	SIZE_OUTPUT int size_output;
 	int len = 0, i = 0;
 	int totalLength = 0;
 
