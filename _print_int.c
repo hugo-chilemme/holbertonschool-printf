@@ -11,13 +11,13 @@ int _print_int(va_list arg)
 	int m = 0;
 	int val = va_arg(arg, int);
 
-	val = val > 0 ? val : -val;
-
 	if (val < 0)
 	{
 		_putchar('-');
 		m++;
 	}
+
+	val = val > 0 ? val : -val;
 
 	parse_int(val, val, 1, &m);
 	return (int_size(m));
