@@ -7,7 +7,7 @@
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
-void _putchar(char c);
+int _putchar(char c);
 int _find_type(char c, va_list arg);
 int _print_char(va_list arg);
 int _print_int(va_list arg);
