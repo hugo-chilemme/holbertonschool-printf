@@ -27,10 +27,10 @@ int _print_float (va_list arg)
 	repDec = (double) i * mult;
 	repUnit = deci;
 
-	parse_int(repUnit, repUnit, 1, &m);
+	parse_int((long int) repUnit, (long int) repUnit, 1, &m);
 	len = int_size(m);
 	_putchar('.');
-	parse_int(repDec, repDec, 1, &m);
+	parse_int((long int) repDec, (long int) repDec, 1, &m);
 	len += int_size(m);
 
 	return (len);
