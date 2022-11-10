@@ -1,0 +1,36 @@
+.TH _printf 1
+.SH NAME
+_printf - Print arguments with format 
+.SH SYNOPSIS
+.B _printf FORMAT [ARGUMENTS]...
+[ h ]
+[ b ]
+.SH DESCRIPTION
+.B _printf
+Displays arguments with variable formats. This is a reproduction of printf (man printf)
+.SH FORMAT
+.TP
+.BR %s
+Print string variable ("Hello")
+.TP
+.BR %i
+Print integer variable (17)
+.TP
+.BR %c
+Print a only char ("H")
+.TP
+.BR %d
+Print a decimal value (17.87)
+.SH FORMATTING
+.TP
+.BR n 
+New line
+.BR t
+Tabulation (4 spaces)
+.SH AUTHORS
+.TP
+.BR Redginald Godeau 
+https://github.com/RedginaldGodeau
+.TP
+.BR Hugo Chilemme
+https://github.com/HugoCLI 
