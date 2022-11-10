@@ -17,9 +17,7 @@ int _print_str(va_list arg)
 
 
 	while (*s != '\0')
-	{
-		len++;
-		_putchar(*s++);
-	}
+		len += _putchar(*s++);
+
 	return (len);
 }
