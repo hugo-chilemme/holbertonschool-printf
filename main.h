@@ -15,7 +15,7 @@ int _print_str(va_list arg);
 int _print_decimal(va_list arg);
 int _print_null(void);
 void parse_int(long int n, long int r, long int mul, long int *m);
-long int int_size(long int n);
+int int_size(long int n);
 int _print_float(va_list arg);
 
 /**
