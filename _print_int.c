@@ -14,7 +14,7 @@ int _print_int(va_list arg)
 	if (val < 0)
 	{
 		_putchar('-');
-		m++;
+		m = 1;
 	}
 
 	val = val > 0 ? val : -val;
