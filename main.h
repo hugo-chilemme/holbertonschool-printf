@@ -11,11 +11,10 @@ int _putchar(char c);
 int _find_type(char c, va_list arg);
 int _print_char(va_list arg);
 int _print_int(va_list arg);
-int _print_int_reverse(int n, int b);
 int _print_str(va_list arg);
 int _print_null(void);
-void parse_int(int n, int r, int mul, int *m);
-int int_size(int n);
+void parse_int(long int n, long int r, long int mul, long int *m);
+long int int_size(long int n);
 int _print_float(va_list arg);
 
 /**
