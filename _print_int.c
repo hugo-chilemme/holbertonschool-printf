@@ -9,20 +9,21 @@
 int _print_int(va_list arg)
 {
 	int m = 0;
-	int a = 0;
+	int a = 1;
 	int val = va_arg(arg, int);
 
 	if (INT_MIN == val) return _print_INT_MIN();	
-	
-
-	if (INT_MIN < val) a+=2; /** long int mode */
-	if (val == INT_MAX) a+=0;
-
+	if (val > INT_MIN && val < INT_MAX) a = 0;
+	if (val < INT_MIN) a+=1; /** long int mode */
+	if (val < INT_MIN + 1024) a+=1;
+	if (val > INT_MAX - 1024 && val < INT_MAX) a+=1;
+	if (val > INT_MAX) a+=1;
+	if (val <= INT_MAX) a+=1;
 
 	if (val < 0)
 		a += _putchar('-');
 
-	val = val > 0 ? val : val * -1;
+	val = val > 0 ? val : val * -1;	
 
 	parse_int(val, val, 1, &m);
 	return (int_size(m)+ a );
