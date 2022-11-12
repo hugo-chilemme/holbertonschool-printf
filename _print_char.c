@@ -7,6 +7,7 @@
 * @arg: va_list parmameter
 */
 
+/*Fonction qui écrit un character*/
 int _print_char(va_list arg)
 {
 	return (_putchar((char) va_arg(arg, int)));
