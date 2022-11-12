@@ -15,14 +15,17 @@ int _printf(const char *format, ...)
 	int len = 0, i = 0;
 	int totalLength = 0;
 
+	/* Check si le format existe */
 	if (!format)
 		return (-1);
 
+	/* Prend la longueur de format */
 	for (; format[len]; len++)
 		;
-
+	/*  VA START */
 	va_start(a, format);
 
+	/* Prend chaque lettre et check si il y a un % pour changer le format */
 	for (; i < len; i++)
 	{
 		if (format[i] == '%')
@@ -34,6 +37,7 @@ int _printf(const char *format, ...)
 		else
 			totalLength += _putchar(format[i]);
 	}
+	/* si format est vide alors ça return -1 */
 	if (totalLength == 0)
 		return (-1);
 	return (totalLength);
