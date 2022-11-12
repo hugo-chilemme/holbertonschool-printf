@@ -8,15 +8,20 @@
 int main(void)
 {
 	int len, len2;
+	long int l = INT_MIN;
 
-	len = _printf("%d\n", 1024);
-	len2 = printf("%d\n", 1024);
+	l -= 1024;
+	printf("main_6.c: Testing...\n");
+	len = _printf("%d\n", l);
+	len2 = printf("%d\n", l);
+	printf("main_6.c: ");
 	fflush(stdout);
 	if (len != len2)
 	{
-		printf("Lengths differ. %i %i\n", len, len2);
+		printf("Lengths differ. %i / %i\n", len, len2);
 		fflush(stdout);
 		return (1);
 	}
+	printf("OK\n");
 	return (0);
 }
