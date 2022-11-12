@@ -11,14 +11,15 @@ int _print_int(va_list arg)
 	int m = 1;
 	int a = 0;
 	int val = va_arg(arg, int);
+	if (INT_MAX == val) a+=1;
 
 	if (val < 0)
-		a = _putchar('-');
+		a += _putchar('-');
 
 	val = val > 0 ? val : val * -1;
 
 	parse_int(val, val, 1, &m);
-	return (int_size(m) + a);
+	return (int_size(m)+ a );
 }
 
 /**
