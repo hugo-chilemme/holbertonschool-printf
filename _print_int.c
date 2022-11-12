@@ -2,7 +2,7 @@
 
 /**
 * _print_int - Entry point...
-* Description: 'the program desc'
+* Description: 'Function qui execute les functions correct par rapport a l'arg'
 * Return: Always 0 (Success)
 * @arg: va_list parmameter
 */
@@ -45,7 +45,7 @@ int _print_int(va_list arg)
 
 /**
 * int_size - Entry point...
-* Description: 'the program desc'
+* Description: 'Donne le n char par rapport au n de 0 dans le int'
 * Return: Always 0 (Success)
 * @n: int parmameter
 */
@@ -68,6 +68,7 @@ int int_size(int n)
  * @mul: multiplie
  * @m: pointer
  */
+/* Permet d'ecrire une chaine int */
 void parse_int(int n, int r, int mul, int *m)
 {
 	int f = (n / mul) % 10;

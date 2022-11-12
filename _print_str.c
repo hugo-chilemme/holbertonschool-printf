@@ -2,7 +2,7 @@
 
 /**
 * _print_str - Entry point...
-* Description: 'the program desc'
+* Description: 'ecrit une string'
 * Return: Always 0 (Success)
 * @arg: va_list parmameter
 */
