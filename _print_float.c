@@ -11,7 +11,7 @@ int _print_float (va_list arg)
 {
 	double i, deci, def = va_arg(arg, double);
 	int repDec, repUnit, len, mult = 1;
-	long int m = 0;
+	int m = 0;
 
 	for (i = def; i > 1; i -= 1)
 		;
@@ -27,10 +27,10 @@ int _print_float (va_list arg)
 	repDec = (double) i * mult;
 	repUnit = deci;
 
-	parse_int((long int) repUnit, (long int) repUnit, 1, &m);
+	parse_int((int) repUnit, (int) repUnit, 1, &m);
 	len = int_size(m);
 	_putchar('.');
-	parse_int((long int) repDec, (long int) repDec, 1, &m);
+	parse_int((int) repDec, (int) repDec, 1, &m);
 	len += int_size(m);
 
 	return (len);
