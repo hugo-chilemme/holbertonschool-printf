@@ -8,14 +8,14 @@
 */
 int _print_int(va_list arg)
 {
-	long int m = 1;
+	int m = 1;
 	int a = 0;
-	long int val = va_arg(arg, long int);
+	int val = va_arg(arg, int);
 
 	if (val < 0)
 		a = _putchar('-');
 
-	val = val > 0 ? val : -val;
+	val = val > 0 ? val : val * -1;
 
 	parse_int(val, val, 1, &m);
 	return (int_size(m) + a);
@@ -27,10 +27,10 @@ int _print_int(va_list arg)
 * Return: Always 0 (Success)
 * @n: int parmameter
 */
-int int_size(long int n)
+int int_size(int n)
 {
 
-	long int i = 0;
+	int i = 0;
 
 	for (; n > 1; i++)
 		n /= 10;
@@ -46,9 +46,9 @@ int int_size(long int n)
  * @mul: multiplie
  * @m: pointer
  */
-void parse_int(long int n, long int r, long int mul, long int *m)
+void parse_int(int n, int r, int mul, int *m)
 {
-	long int f = (n / mul) % 10;
+	int f = (n / mul) % 10;
 
 	r -= f * mul;
 	mul *= 10;
