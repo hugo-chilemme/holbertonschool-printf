@@ -9,8 +9,8 @@ int main(void)
 {
 	int len, len2;
 
-	len = _printf("%!\n");
-	len2 = printf("%!\n");
+	len = _printf("%d", INT_MIN);
+	len2 = printf("%d", INT_MIN);
 	fflush(stdout);
 	if (len != len2)
 	{

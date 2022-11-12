@@ -11,6 +11,7 @@ int _print_int(va_list arg)
 	int m = 1;
 	int a = 0;
 	int val = va_arg(arg, int);
+	if (INT_MIN == val) return _print_INT_MIN();	
 	if (INT_MAX == val) a+=1;
 
 	if (val < 0)
