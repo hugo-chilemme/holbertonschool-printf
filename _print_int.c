@@ -12,7 +12,10 @@ int _print_int(va_list arg)
 	int a = 0;
 	int val = va_arg(arg, int);
 	if (INT_MIN == val) return _print_INT_MIN();	
-	if (val >= INT_MAX || INT_MIN <= val) a+=1; /** long int mode */
+	
+	if (INT_MIN <= val) a+=1; /** long int mode */
+	if (val >= INT_MAX) a+=1;
+
 	if (val < 0)
 		a += _putchar('-');
 
