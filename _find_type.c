@@ -13,6 +13,7 @@ int _find_type(char c, va_list arg)
 	formats list[] = {
 		{"i", _print_int},
 		{"d", _print_decimal},
+		{"b", _print_binary},
 		{"c", _print_char},
 		{"s", _print_str},
 		{NULL, NULL}
