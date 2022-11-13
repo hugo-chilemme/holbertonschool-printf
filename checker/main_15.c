@@ -9,10 +9,11 @@ int main(void)
 {
 	int len, len2;
 	long int l = INT_MAX;
-	printf("main_15.c: Testing...\n\n");
 	l += 1024;
 	len = _printf("%i\n", l);
 	len2 = printf("%i\n", l);
+
+	
 	fflush(stdout);
 	printf("\nmain_15.c: ");
 	if (len != len2)

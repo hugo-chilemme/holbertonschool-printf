@@ -11,6 +11,7 @@ int main(void)
 
 	len = _printf("iddi%diddiiddi\n", 1024);
 	len2 = printf("iddi%diddiiddi\n", 1024);
+	
 	fflush(stdout);
 	printf("main_21.c: ");
 	if (len != len2)

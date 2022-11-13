@@ -8,9 +8,9 @@
 int main(void)
 {
 	int len, len2;
-
 	len = _printf("%d == %i\n", 1024, 1024);
 	len2 = printf("%d == %i\n", 1024, 1024);
+
 	fflush(stdout);
 	printf("\n\nmain_20.c: ");
 	if (len != len2)

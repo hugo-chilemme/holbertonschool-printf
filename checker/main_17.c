@@ -8,9 +8,9 @@
 int main(void)
 {
 	int len, len2;
-	printf("main_17.c: Testing...\n\n");
 	len = _printf("There is %i bytes in %i KB\n", 1024, 1);
 	len2 = printf("There is %i bytes in %i KB\n", 1024, 1);
+
 	fflush(stdout);
 	printf("\nmain_17.c: ");
 	if (len != len2)

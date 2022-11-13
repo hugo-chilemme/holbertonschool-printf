@@ -8,9 +8,10 @@
 int main(void)
 {
 	int len, len2;
-	printf("main_11.c: Testing...\n\n");
 	len = _printf("%i\n", -1024);
 	len2 = printf("%i\n", -1024);
+
+	
 	printf("\nmain_11.c: ");
 	fflush(stdout);
 	if (len != len2)

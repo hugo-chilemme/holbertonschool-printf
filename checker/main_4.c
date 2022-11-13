@@ -8,7 +8,6 @@
 int main(void)
 {
 	int len, len2;
-	printf("main_4.c: Testing...\n\n");
 	len = _printf("%d\n", INT_MIN);
 	len2 = printf("%d\n", INT_MIN);
 	fflush(stdout);

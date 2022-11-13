@@ -8,9 +8,9 @@
 int main(void)
 {
 	int len, len2;
-	printf("main_18.c: Testing...\n\n");
 	len = _printf("%i - %i = %i\n", 1024, 2048, -1024);
 	len2 = printf("%i - %i = %i\n", 1024, 2048, -1024);
+	
 	fflush(stdout);
 	printf("\nmain_18.c: ");
 	if (len != len2)

@@ -11,6 +11,7 @@ int main(void)
 
 	len = _printf("%d", 10000);
 	len2 = printf("%d", 10000);
+	
 	fflush(stdout);
 	printf("\nmain_22.c: ");
 	if (len != len2)

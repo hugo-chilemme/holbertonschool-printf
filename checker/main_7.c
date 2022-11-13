@@ -8,8 +8,6 @@
 int main(void)
 {
 	int len, len2;
-	printf("main_7.c: Testing...\n\n");
-
 	len = _printf("There is %d bytes in %d KB\n", 1024, 1);
 	len2 = printf("There is %d bytes in %d KB\n", 1024, 1);
 
