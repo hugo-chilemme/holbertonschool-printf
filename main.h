@@ -12,6 +12,7 @@ int _putchar(char c);
 int _find_type(char c, va_list arg);
 int _print_char(va_list arg);
 int _print_int(va_list arg);
+int _print_binary(va_list arg);
 int _print_INT_MIN(void);
 int _print_str(va_list arg);
 int _print_decimal(va_list arg);
