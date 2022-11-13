@@ -9,8 +9,14 @@
 int _print_binary(va_list arg)
 {
 	int bin = va_arg(arg, int);
-	int binRes = bin;
 	int binMax = 1;
+	if (bin < 0) 
+	{
+		_putchar('-');
+		bin *= -1;
+	
+	}
+	int binRes = bin;
 	int binIndex = 0;
 
 	while (binMax < bin)
