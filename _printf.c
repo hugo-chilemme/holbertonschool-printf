@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
-* _print_f - Entry point...
+* _printf - Entry point...
 * Description: 'the program desc'
 * Return: Always 0 (Success)
 * @format: string parmameter
@@ -15,27 +15,30 @@ int _printf(const char *format, ...)
 	int len = 0, i = 0;
 	int totalLength = 0;
 
+	/* Check si le format existe */
 	if (!format)
-		return (0);
+		return (-1);
 
-	va_start(a, format);
-
+	/* Prend la longueur de format */
 	for (; format[len]; len++)
 		;
+	/*  VA START */
+	va_start(a, format);
 
+	/* Prend chaque lettre et check si il y a un % pour changer le format */
 	for (; i < len; i++)
 	{
 		if (format[i] == '%')
 		{
-			totalLength += _get_type(format[i + 1], a);
+			if (format[i + 1])
+				totalLength += _find_type(format[i + 1], a);
 			i++;
 		}
 		else
-		{
-			_putchar(format[i]);
-			totalLength++;
-		}
+			totalLength += _putchar(format[i]);
 	}
-	printf("%i", totalLength);
+	/* si format est vide alors ça return -1 */
+	if (totalLength == 0)
+		return (-1);
 	return (totalLength);
 }
