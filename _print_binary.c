@@ -10,14 +10,14 @@ int _print_binary(va_list arg)
 {
 	int bin = va_arg(arg, int);
 	int binMax = 1;
-	if (bin < 0) 
+	int binRes = 0;
+	int binIndex = 0;
+
+	if (bin < 0)
 	{
 		_putchar('-');
 		bin *= -1;
-	
 	}
-	int binRes = bin;
-	int binIndex = 0;
 
 	while (binMax < bin)
 		binMax *= 2;
@@ -29,10 +29,10 @@ int _print_binary(va_list arg)
 		{
 			_putchar('1');
 			binRes -= binMax;
-		} 
+		}
 		else
 			_putchar('0');
 		binMax /= 2;
-	}	
+	}
 	return (binIndex);
 }
