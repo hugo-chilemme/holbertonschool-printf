@@ -15,8 +15,8 @@ int _printf(const char *format, ...)
 	char currChar;
 	char nextChar;
 
-    if (!format || (format[0] == '%' && strlen(format) == 1))
-        return (-1);
+	if (!format || (format[0] == '%' && strlen(format) == 1))
+		return (-1);
 
 	va_start(args, format);
 
@@ -30,8 +30,8 @@ int _printf(const char *format, ...)
 		if (currChar != '%' || !nextChar || !execute_operator)
 		{
 			size += _putchar(currChar);
-            if (currChar == '%' && nextChar == '%')
-                ss += 1;
+			if (currChar == '%' && nextChar == '%')
+				ss += 1;
 			continue;
 		}
 		size += execute_operator(args);
