@@ -10,7 +10,7 @@ int (*get_operator(char operator))(va_list)
 	int sf;
 	formats ops[] = {
 		{"c", _print_char},
-		{"s", _print_str},
+		{"s", _string_process},
 		{NULL, NULL}
 	};
 

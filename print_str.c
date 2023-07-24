@@ -1,16 +1,34 @@
 #include "main.h"
 
+
 /**
- * _print_str - check the code
+ * _string_process - check the code
  * @arg: va_list
  * Return: Size of char.
  */
-int _print_str(va_list arg)
+int _string_process(va_list arg)
 {
 	char *c = va_arg(arg, char*);
+
+	return (_print_str(c));
+}
+
+
+/**
+ * _print_str - check the code
+ * @c: string
+ * Return: Size of char.
+ */
+int _print_str(char *c)
+{
 	int i = 0;
 
 	while (c && c[i])
 		_putchar(c[i++]);
+
+	if (i == 0)
+	{
+		return (_print_str("(null)"));
+	}
 	return (i);
 }

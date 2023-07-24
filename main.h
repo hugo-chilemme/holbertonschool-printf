@@ -13,7 +13,10 @@ int _printf(const char *format, ...);
 int (*get_operator(char operator))(va_list);
 
 int _print_char(va_list arg);
-int _print_str(va_list arg);
+
+int _string_process(va_list arg);
+int _print_str(char *c);
+
 
 /**
  * struct formats - Struct dog
