@@ -23,12 +23,11 @@ int _print_str(char *c)
 {
 	int i = 0;
 
+	if (!c)
+		return (_print_str("(null)"));
+
 	while (c && c[i])
 		_putchar(c[i++]);
 
-	if (i == 0)
-	{
-		return (_print_str("(null)"));
-	}
 	return (i);
 }
