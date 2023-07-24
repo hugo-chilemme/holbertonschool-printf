@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 	char currChar;
 	char nextChar;
 
-    if (!format)
+    if (!format || (format[0] == '%' && strlen(format) == 1))
         return (-1);
 
 	va_start(args, format);
