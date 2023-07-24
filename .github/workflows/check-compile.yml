@@ -1,0 +1,17 @@
+name: Check Compile Program
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Récupérer le code source
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Exécuter la vérification Betty sur les fichiers *.c
+      - name: Run Compile Program
+        run: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format *.c
