@@ -1,0 +1,30 @@
+name: Check Betty Coding Style and Compile
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Récupérer le code source
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      # Installer Betty
+      - name: Setup Betty
+        uses: mkarmona/betty-action@v1
+
+      # Exécuter la vérification Betty sur les fichiers *.c
+      - name: Run Betty and check for errors
+        run: |
+          betty ./**/*.c | tee output.txt
+          if grep -qiE 'error|warning' output.txt; then
+            echo "ERROR or WARNING found in Betty style check output."
+            exit 1
+          fi
+
+      # Vérifier la compilation avec GCC
+      - name: Compile with GCC
+        run: gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -Wno-format ./*.c
