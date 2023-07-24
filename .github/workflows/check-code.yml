@@ -13,14 +13,14 @@ jobs:
         uses: actions/checkout@v2
 
       # Installer Betty
-      - name: Install Betty
+      - name: Installing Betty
         run: |
           git clone https://github.com/holbertonschool/Betty.git
           cd Betty
           sudo ./install.sh
 
       # Exécuter la vérification Betty sur les fichiers *.c
-      - name: Run Betty 
+      - name: Launch Betty and verify files
         run: |
           betty *.c | tee output.txt
           if grep -qiE 'error|warning' output.txt; then
