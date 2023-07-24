@@ -20,9 +20,9 @@ jobs:
           sudo ./install.sh
 
       # Exécuter la vérification Betty sur les fichiers *.c
-      - name: Run Betty and check for errors
+      - name: Run Betty 
         run: |
-          betty ./**/*.c | tee output.txt
+          betty *.c | tee output.txt
           if grep -qiE 'error|warning' output.txt; then
             echo "ERROR or WARNING found in Betty style check output."
             exit 1
