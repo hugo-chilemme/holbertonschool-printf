@@ -15,9 +15,12 @@ int _printf(const char *format, ...)
 	char currChar;
 	char nextChar;
 
+    if (!format)
+        return (-1);
+
 	va_start(args, format);
 
-	while (format && format[ss])
+	while (format[ss])
 	{
 
 		currChar = format[ss];

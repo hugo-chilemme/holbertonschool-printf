@@ -1,18 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Return: 0 on success, error code otherwise
  */
 int main(void)
 {
-    int len;
-    int len2;
+	int len, len2;
 
-    len = _printf("%%\n");
-    len2 = printf("%%\n");
-
-    printf("%i / %i", len, len2);
-    return (0);
+	len = _printf(NULL);
+	len2 = printf(NULL);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ. %i / %i\n", len, len2);
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 }
