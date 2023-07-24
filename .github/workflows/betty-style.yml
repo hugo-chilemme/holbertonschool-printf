@@ -21,4 +21,4 @@ jobs:
 
       # Exécuter la vérification Betty sur les fichiers *.c
       - name: Run Betty
-        run: betty ./**/*.c
+        run: betty *.c
