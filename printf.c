@@ -26,7 +26,8 @@ int _printf(const char *format, ...)
 
 		if (currChar != '%' || !nextChar || !execute_operator)
 		{
-			size += _putchar(currChar);
+            if (!nextChar || nextChar != '%')
+			    size += _putchar(currChar);
 			continue;
 		}
 		size += execute_operator(args);
