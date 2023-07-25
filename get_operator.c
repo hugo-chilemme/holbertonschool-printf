@@ -11,14 +11,12 @@ int (*get_operator(char operator))(va_list)
 	formats ops[] = {
 		{"c", _print_char},
 		{"s", _string_process},
+		{"d", _print_decimal},
 		{NULL, NULL}
 	};
 
-	if (!operator)
-		return (NULL);
-
 	sf = 0;
-	while (ops[sf].t)
+	while (operator && ops[sf].t)
 	{
 		if (*ops[sf].t == operator)
 			return (ops[sf].f);
