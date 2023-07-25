@@ -22,7 +22,6 @@ int _printf(const char *format, ...)
 
 	while (format[ss])
 	{
-
 		currChar = format[ss];
 		nextChar = format[ss += 1];
 		execute_operator = get_operator(nextChar);
