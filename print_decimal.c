@@ -9,7 +9,7 @@ int _print_last_number(int n, int r, int mul)
     r -= f * mul;
     mul *= 10;
 
-    if (r > 1)
+    if (r > 0)
         s += _print_last_number(n, r, mul);
     s += _putchar('0' + f);
     return (s);
